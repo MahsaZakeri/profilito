@@ -1,16 +1,34 @@
+import { useSkill } from "../../context/SkillContext";
 import SectionTitle from "../SectionTitle/SectionTitle";
+import { summaryTextOne, summaryTextTwo } from "../../constants/constants";
 import "./Summary.css";
 
 const Summary = () => {
+  const { selectedSkill } = useSkill();
+
+  const getHighlightedText = (text: string) => {
+    if (!selectedSkill) return text;
+
+    const regex = new RegExp(`(${selectedSkill})`, "gi");
+    const parts = text.split(regex);
+
+    return parts.map((part, index) =>
+      part.toLowerCase() === selectedSkill.toLowerCase() ? (
+        <mark key={index} className="highlight">
+          {part}
+        </mark>
+      ) : (
+        part
+      )
+    );
+  };
+
   return (
     <section className="summary">
       <div className="summary-inner">
         <SectionTitle label="Summary" />
-        <p className="summary-text">
-          Front-End Developer with 5+ years of experience creating and improving user-friendly web applications. Skilled in Angular, React, and responsive design, with a proven ability to research,
-          prototype, and develop key features. Experienced in mentoring junior developers and supporting teammates, with a passion for building scalable and easy-to-use web applications while staying
-          at the forefront of front-end technologies.
-        </p>
+        <p className="summary-text">{getHighlightedText(summaryTextOne)}</p>
+        <p className="summary-text">{getHighlightedText(summaryTextTwo)}</p>
       </div>
     </section>
   );

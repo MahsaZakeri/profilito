@@ -1,0 +1,20 @@
+.skill-button {
+  padding: 10px 16px;
+  border: 2px solid #1c3faa;
+  background-color: #ffffff;
+  color: #1c3faa;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.skill-button:hover {
+  background-color: #1c3faa;
+  color: #ffffff;
+}
+
+.skill-button.active {
+  background-color: #1c3faa;
+  color: #ffffff;
+}

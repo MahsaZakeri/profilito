@@ -1,10 +1,9 @@
-.summary {
-  padding: 50px 20px;
-  display: flex;
-  justify-content: center;
+.skills {
+  padding: 20px;
+  width: 100%;
 }
 
-.summary-inner {
+.skills-inner {
   background-color: white;
   padding: 40px;
   border-radius: 12px;
@@ -12,22 +11,21 @@
   transition: transform 0.3s ease;
 }
 
-.summary-inner:hover {
+.skills-inner:hover {
   transform: translateY(-4px);
 }
 
-.summary-text {
-  font-size: 18px;
-  line-height: 1.75;
-  color: #333;
-  margin-bottom: 24px;
-  text-align: justify;
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 @media (min-width: 1024px) {
-  .summary {
+  .skills {
     padding: 0;
+    width: 30%;
     display: flex;
-    width: 65%;
+    justify-content: center;
   }
 }

@@ -11,9 +11,10 @@ const Header = () => {
         <p className="title">Senior Frontend Software Engineer</p>
 
         <nav className="links" aria-label="Contact links">
-          <ContactLink href="mailto:mahsa@example.com" label="Email" />
-          <ContactLink href="https://github.com/yourusername" label="GitHub" />
-          <ContactLink href="https://linkedin.com/in/yourusername" label="LinkedIn" />
+          <ContactLink href="mailto:mahsazakeri.dev@gmail.com" label="Email" />
+          <ContactLink href="https://github.com/MahsaZakeri" label="GitHub" />
+          <ContactLink href="https://linkedin.com/in/mahsa-zakeri" label="LinkedIn" />
+          <ContactLink href="https://wa.me/989352930991" label="WhatsApp" />
         </nav>
       </div>
     </header>

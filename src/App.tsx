@@ -1,14 +1,12 @@
-import Header from "./components/Header/Header"
+import Layout from "./layout/Layout";
 import Summary from "./components/Summary/Summary";
 
 function App() {
-
   return (
-    <>
-      <Header />
+    <Layout>
       <Summary />
-    </>
+    </Layout>
   );
 }
 
-export default App
+export default App;

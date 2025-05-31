@@ -1,4 +1,4 @@
-import type { Title } from "../../models/title";
+import type { Title } from "../../models/Title";
 import "./SectionTitle.css";
 
 const SectionTitle = ({ label }: Title) => {

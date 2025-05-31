@@ -1,4 +1,4 @@
-import type { ContactLinkProps } from "../../models/contact";
+import type { ContactLinkProps } from "../../models/Contact";
 import "./ContactLink.css";
 
 const ContactLink = ({ href, label, icon: Icon }: ContactLinkProps) => {

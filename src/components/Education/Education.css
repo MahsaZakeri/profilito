@@ -1,0 +1,48 @@
+.education {
+  padding: 0 20px;
+}
+
+.education-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  padding: 24px;
+  margin: 0 60px 60px;
+}
+
+.education-date {
+  font-weight: 500;
+  color: #666;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #e3e3e3;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.education-school {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 8px 0;
+}
+
+.education-school a {
+  text-decoration: none;
+  color: #1c3faa;
+}
+
+.education-degree {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.education-highlights {
+  padding-left: 20px;
+  color: #444;
+}
+
+.education-highlights li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}

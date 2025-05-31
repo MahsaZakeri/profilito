@@ -52,7 +52,7 @@ export const experiences = [
       "Follow Agile practices through Azure DevOps, GitHub, and CI pipelines.",
       "Support Angular upgrade migration (14+), resolving deprecations and improving stability.",
     ],
-    technologies: ["Angular", "Flutter", "TypeScript", "GraphQL", "Firebase", "Postman", "Swagger", "Figma", "GitHub", "Azure DevOps", "ClickUp", "Git"],
+    technologies: ["Angular", "Flutter", "TypeScript", "GraphQL", "Firebase", "Postman", "Swagger", "Figma", "GitHub", "Azure DevOps", "ClickUp", "Git", "HTML", "CSS"],
     project: {
       name: "PalmerBet",
       link: "https://www.palmerbet.com/",
@@ -79,7 +79,7 @@ export const experiences = [
       "Created developer onboarding documentation to support long-term codebase maintainability.",
       "Designed reusable components that streamlined development and reduced redundancy.",
     ],
-    technologies: ["React", "Next.js", "TypeScript", "Redux", "Socket.IO", "WebRTC", "Material-UI", "Figma", "Postman", "Swagger", "Jira", "GitLab"],
+    technologies: ["React", "Next.js", "TypeScript", "Redux", "Socket.IO", "WebRTC", "Material-UI", "Figma", "Postman", "Swagger", "Jira", "GitLab", "HTML", "CSS", "Tailwind"],
   },
   {
     date: "Sep 2018 – May 2021",

@@ -5,9 +5,9 @@ import { education } from "../../constants/constants";
 const EducationCard = () => {
   return (
     <section className="education">
-      <SectionTitle label="Education" />
       {education.map((edu, index) => (
         <div className="education-card" key={index}>
+          <SectionTitle label="Education" />
           <span className="education-school">
             <a href={edu.website} target="_blank" rel="noopener noreferrer">
               {edu.school}

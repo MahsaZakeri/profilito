@@ -27,9 +27,10 @@ const TimelineContent = ({ experience }: Props) => {
 
   return (
     <div className="timeline-right">
-      <h3 className="job-title">{getHighlightedText(experience.title)}</h3>
-      <span className="job-company">{getHighlightedText(experience.company)}</span>
-      <span className="job-location">{getHighlightedText(experience.location)}</span>
+      <h3 className="job-title">{experience.title}</h3>
+      <span className="job-company">{experience.company}</span>
+      <span className="job-date">{experience.date}</span>
+      <span className="job-location">{experience.location}</span>
       <p className="job-description">{getHighlightedText(experience.description)}</p>
 
       {experience.project && (
@@ -50,7 +51,7 @@ const TimelineContent = ({ experience }: Props) => {
       <div className="job-tech">
         {experience.technologies.map((tech, idx) => (
           <span className="tech-badge" key={idx}>
-            {tech}
+            {getHighlightedText(tech)}
           </span>
         ))}
       </div>

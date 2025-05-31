@@ -1,0 +1,14 @@
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  transition: color 0.2s ease-in-out;
+}
+
+.contact-link:hover {
+    transform: scale(1.05);
+  color: #ffee58;
+  transition: all 0.2s ease-in-out;
+}

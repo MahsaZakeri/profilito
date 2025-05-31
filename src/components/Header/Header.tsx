@@ -1,3 +1,4 @@
+import { FaEnvelope, FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import ContactLink from "../ContactLink/ContactLink";
 import profileImage from "../../assets/profile.jpeg";
 import "./Header.css";
@@ -11,10 +12,10 @@ const Header = () => {
         <p className="title">Senior Frontend Software Engineer</p>
 
         <nav className="links" aria-label="Contact links">
-          <ContactLink href="mailto:mahsazakeri.dev@gmail.com" label="Email" />
-          <ContactLink href="https://github.com/MahsaZakeri" label="GitHub" />
-          <ContactLink href="https://linkedin.com/in/mahsa-zakeri" label="LinkedIn" />
-          <ContactLink href="https://wa.me/989352930991" label="WhatsApp" />
+          <ContactLink href="mailto:mahsazakeri.dev@gmail.com" label="Email" icon={FaEnvelope} />
+          <ContactLink href="https://github.com/MahsaZakeri" label="GitHub" icon={FaGithub} />
+          <ContactLink href="https://linkedin.com/in/mahsa-zakeri" label="LinkedIn" icon={FaLinkedin} />
+          <ContactLink href="https://wa.me/989352930991" label="WhatsApp" icon={FaWhatsapp} />
         </nav>
       </div>
     </header>

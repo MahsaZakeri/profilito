@@ -6,37 +6,16 @@
   padding: 20px;
   background: linear-gradient(to right, #b0bde4, #4b6cb7, #1c3faa);
   text-align: center;
-  position: relative;
   color: #fff;
   overflow: hidden;
 }
 
-.header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 50%, rgba(255, 255, 255, 0.15) 100%);
-  animation: shimmer 8s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes shimmer {
-  0% {
-    transform: translateX(-25%);
-  }
-  100% {
-    transform: translateX(25%);
-  }
-}
-
 .header-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
-  padding: 2rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
 }
 
 .profile-pic {
@@ -56,7 +35,7 @@
 
 .title {
   font-size: 21px;
-    color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
   margin: 10px 0;
   font-weight: 500;
 }
@@ -65,14 +44,4 @@
   display: flex;
   justify-content: center;
   gap: 1.5rem;
-}
-
-.contact-link {
-  font-weight: 500;
-  color: #0077cc;
-  transition: color 0.2s ease-in-out;
-}
-
-.contact-link:hover {
-  color: #004a99;
 }

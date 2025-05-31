@@ -1,0 +1,27 @@
+.summary {
+  background: linear-gradient(to right, #f0f4ff, #ffffff);
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.summary-inner {
+  width: 90%;
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(28, 63, 170, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.summary-inner:hover {
+  transform: translateY(-4px);
+}
+
+.summary-text {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #333;
+  margin-bottom: 24px;
+  text-align: justify;
+}

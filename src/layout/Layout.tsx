@@ -3,6 +3,7 @@ import "./Layout.css";
 import Summary from "../components/Summary/Summary";
 import Skills from "../components/Skills/Skills";
 import ExperienceTimeline from "../components/ExperienceTimeline/ExperienceTimeline";
+import Footer from "../components/Footer/footer";
 
 const Layout = () => {
   return (
@@ -15,6 +16,7 @@ const Layout = () => {
         </div>
         <ExperienceTimeline />
       </main>
+      <Footer />
     </div>
   );
 };

@@ -32,6 +32,15 @@ const TimelineContent = ({ experience }: Props) => {
       <span className="job-location">{getHighlightedText(experience.location)}</span>
       <p className="job-description">{getHighlightedText(experience.description)}</p>
 
+      {experience.project && (
+        <div className="job-project">
+          <strong>Project:</strong>{" "}
+          <a href={experience.project.link} target="_blank" rel="noopener noreferrer" className="job-project-link">
+            {experience.project.name}
+          </a>
+        </div>
+      )}
+
       <ul className="job-highlights">
         {experience.highlights.map((point, idx) => (
           <li key={idx}>{getHighlightedText(point)}</li>

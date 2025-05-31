@@ -7,4 +7,8 @@ export interface Experience {
   highlights: string[];
   technologies: string[];
   image?: string;
+  project?: {
+    name: string;
+    link: string;
+  };
 }

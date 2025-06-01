@@ -1,9 +1,21 @@
-import { experiences } from "../../constants/constants";
 import SectionTitle from "../SectionTitle/SectionTitle";
 import TimelineEntry from "./TimelineEntry/TimeLineEntry";
 import "./ExperienceTimeline.css";
+import { useEffect, useState } from "react";
+import { getExperiences } from "../../services/getExperiences";
+import type { Experience } from "../../models/Experience";
 
 const ExperienceTimeline = () => {
+  const [experiences, setExperiences] = useState<Experience[]>([]);
+
+  useEffect(() => {
+    const fetchExperiences = async () => {
+      const data = await getExperiences();
+      setExperiences(data);
+    };
+    fetchExperiences();
+  }, []);
+
   return (
     <section className="experience-timeline">
       <SectionTitle label="Experience" />

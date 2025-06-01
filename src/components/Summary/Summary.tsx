@@ -1,10 +1,25 @@
 import { useSkill } from "../../context/SkillContext";
 import SectionTitle from "../SectionTitle/SectionTitle";
-import { summaryTextOne, summaryTextTwo } from "../../constants/constants";
+import { getSummary } from "../../services/getSummary";
 import "./Summary.css";
+import { useEffect, useState } from "react";
 
 const Summary = () => {
   const { selectedSkill } = useSkill();
+  const [summaryTextOne, setSummaryTextOne] = useState("");
+  const [summaryTextTwo, setSummaryTextTwo] = useState("");
+
+  useEffect(() => {
+    const fetchSummary = async () => {
+      const data = await getSummary();
+      if (data) {
+        setSummaryTextOne(data.textOne || "");
+        setSummaryTextTwo(data.textTwo || "");
+      }
+    };
+
+    fetchSummary();
+  }, []);
 
   const getHighlightedText = (text: string) => {
     if (!selectedSkill) return text;

@@ -1,11 +1,23 @@
 import SectionTitle from "../SectionTitle/SectionTitle";
+import { useEffect, useState } from "react";
+import type { Education } from "../../models/Education";
+import { getEducation } from "../../services/getEducation";
 import "./Education.css";
-import { education } from "../../constants/constants";
 
 const EducationCard = () => {
+  const [educationData, setEducationData] = useState<Education[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await getEducation();
+      setEducationData(data);
+    };
+    fetchData();
+  }, []);
+
   return (
     <section className="education">
-      {education.map((edu, index) => (
+      {educationData.map((edu, index) => (
         <div className="education-card" key={index}>
           <SectionTitle label="Education" />
           <span className="education-school">

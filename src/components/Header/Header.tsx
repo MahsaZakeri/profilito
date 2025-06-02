@@ -9,7 +9,7 @@ const Header = () => {
       <img src={profileImage} alt="Mahsa Zakari" className="profile-pic" loading="eager" />
       <div className="header-content" role="banner">
         <h1 className="name">Mahsa Zakari</h1>
-        <p className="title">Senior Frontend Software Engineer</p>
+        <p className="title">Senior Front-end Developer</p>
 
         <nav className="links" aria-label="Contact links">
           <ContactLink href="mailto:mahsazakeri.dev@gmail.com" label="Email" icon={FaEnvelope} />

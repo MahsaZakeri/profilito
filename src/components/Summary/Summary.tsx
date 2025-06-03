@@ -3,9 +3,11 @@ import SectionTitle from "../SectionTitle/SectionTitle";
 import { getSummary } from "../../services/getSummary";
 import "./Summary.css";
 import { useEffect, useState } from "react";
+import Loader from "../Loader/Loader";
 
 const Summary = () => {
   const { selectedSkill } = useSkill();
+  const [loading, setLoading] = useState(true);
   const [summaryTextOne, setSummaryTextOne] = useState("");
   const [summaryTextTwo, setSummaryTextTwo] = useState("");
 
@@ -15,6 +17,7 @@ const Summary = () => {
       if (data) {
         setSummaryTextOne(data.textOne || "");
         setSummaryTextTwo(data.textTwo || "");
+        setLoading(false);
       }
     };
 
@@ -39,13 +42,19 @@ const Summary = () => {
   };
 
   return (
-    <section className="summary">
-      <div className="summary-inner">
-        <SectionTitle label="Summary" />
-        <p className="summary-text">{getHighlightedText(summaryTextOne)}</p>
-        <p className="summary-text">{getHighlightedText(summaryTextTwo)}</p>
-      </div>
-    </section>
+    <>
+      {loading ? (
+        <Loader />
+      ) : (
+        <section className="summary">
+          <div className="summary-inner">
+            <SectionTitle label="Summary" />
+            <p className="summary-text">{getHighlightedText(summaryTextOne)}</p>
+            <p className="summary-text">{getHighlightedText(summaryTextTwo)}</p>
+          </div>
+        </section>
+      )}
+    </>
   );
 };
 
